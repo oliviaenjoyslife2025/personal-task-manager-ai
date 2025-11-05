@@ -1,4 +1,4 @@
-# 📅 Personal Task Manager AI
+# Personal Task Manager AI
 
 ### A full-stack Personal Task Manager built with Django and React, featuring PostgreSQL data storage, and integrated AI-based analysis to provide user behavioral insights.
 
@@ -25,7 +25,7 @@ This project is a modernized task management system designed to help users go be
 | **AI/ML** | Rule-Based Engine (Initial) / Scikit-learn (Future) | Generating data-backed behavioral insights. |
 | **Asynchronous Tasks** | Django-Q / Celery (Planned) | Handling email reminders and heavy analysis tasks. |
 
-## 📦 Getting Started
+## Getting Started
 
 Follow these steps to get the project up and running on your local machine.
 
