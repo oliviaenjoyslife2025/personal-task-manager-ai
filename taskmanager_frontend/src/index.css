@@ -1,0 +1,33 @@
+/* Import Tailwind CSS base directives (Standard practice for Vite/React projects) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure all elements use border-box model for easier layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global styles and background */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f8ff; /* Very light blue background */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Ensure React app root element also takes full height */
+#root {
+  min-height: 100vh;
+}
