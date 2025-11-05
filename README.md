@@ -54,9 +54,9 @@ First, ensure PostgreSQL is installed and running. Then create a database and us
 
 ```sql
 -- Connect to PostgreSQL as superuser
-CREATE DATABASE task_db;
-CREATE USER taskuser WITH PASSWORD 'aa123';
-GRANT ALL PRIVILEGES ON DATABASE task_db TO taskuser;
+CREATE DATABASE db_name;
+CREATE USER user_name WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE db_name TO user_name;
 ```
 
 #### 2.2 Install Dependencies
@@ -64,15 +64,6 @@ GRANT ALL PRIVILEGES ON DATABASE task_db TO taskuser;
 ```bash
 # Navigate to backend directory
 cd taskmanager_backend
-
-# Create a virtual environment (recommended)
-python -m venv venv
-
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
 
 # Install Python dependencies
 pip install -r requirements.txt
