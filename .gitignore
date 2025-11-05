@@ -1,0 +1,16 @@
+# Python / Django 
+*.pyc
+*~
+__pycache__
+venv/
+.env
+db.sqlite3
+/taskmanager_backend/settings_local.py
+
+# Operating System Files
+.DS_Store
+
+# React / Node.js
+/taskmanager_frontend/node_modules
+/taskmanager_frontend/build
+npm-debug.log
