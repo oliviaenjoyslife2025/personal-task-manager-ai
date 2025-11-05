@@ -1,3 +1,6 @@
+
+<img width="1316" height="678" alt="image" src="https://github.com/user-attachments/assets/6ae027f3-653a-4874-acfa-2ecb0283572c" />
+
 # Personal Task Manager AI
 
 ### A full-stack Personal Task Manager built with Django and React, featuring PostgreSQL data storage, and integrated AI-based analysis to provide user behavioral insights.
