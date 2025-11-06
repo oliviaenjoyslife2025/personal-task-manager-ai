@@ -3,7 +3,7 @@
 
 # Personal Task Manager AI
 
-### A full-stack Personal Task Manager built with Django and React, featuring PostgreSQL data storage, and integrated AI-based analysis to provide user behavioral insights.
+#### A full-stack Task Manager built with Django and React, featuring PostgreSQL data storage, and integrated AI-based analysis to provide user behavioral insights.
 
 ## Overview
 
@@ -14,8 +14,6 @@ This project is a modernized task management system designed to help users go be
 * **Full CRUD:** Complete functionality for creating, viewing, updating, and deleting tasks.
 * **Advanced Scheduling:** Support for task priority (High, Medium, Low) and configuration of recurring tasks.
 * **AI Behavioral Insights:** Analyzes the past three days of user tasks (volume, completion rate, timing) to generate actionable insights into work habits.
-* **Email Reminders:** Automated email notifications for approaching task deadlines.
-* **Modern Interface:** Built with React and Material UI for a responsive, accessible, and user-friendly experience.
 
 ## Technology Stack
 
@@ -26,7 +24,7 @@ This project is a modernized task management system designed to help users go be
 | **Frontend** | **React.js** + **Material-UI** | Building a modern Single Page Application (SPA) interface. |
 | **Data Analysis** | **Pandas** / **NumPy** | High-performance extraction and feature engineering from task data. |
 | **AI/ML** | Rule-Based Engine (Initial) / Scikit-learn (Future) | Generating data-backed behavioral insights. |
-| **Asynchronous Tasks** | Django-Q / Celery (Planned) | Handling email reminders and heavy analysis tasks. |
+| **Asynchronous Tasks** | Celery (Planned) | Handling email reminders and heavy analysis tasks. |
 
 ## Getting Started
 
@@ -36,7 +34,7 @@ Follow these steps to get the project up and running on your local machine.
 
 * Python 3.9+
 * Node.js and npm (or yarn)
-* A running **PostgreSQL** database service.
+* A running **PostgreSQL** database server locally(will need to provid credention in settings.py when we run the backend on our machine) .
 
 ### 1. Repository Setup & Clone
 
@@ -137,7 +135,6 @@ All API endpoints are prefixed with `/v1/`:
 
 **Backend URL Configuration:**
 - Main URL config: `taskmanager_backend/config/urls.py`
-  - `/admin/` → Django admin interface
   - `/v1/` → Includes task API routes
 - Task API routes: `taskmanager_backend/tasks/urls.py`
   - Uses Django REST Framework's `DefaultRouter`
@@ -237,16 +234,7 @@ During the development of this project, several technical challenges were encoun
 - Added `'rest_framework'` to `INSTALLED_APPS` in Django settings
 - This ensures REST Framework's templates and static files are properly registered and accessible
 
-### 3. Frontend-Backend API Path Consistency
-
-**Challenge:** Initially used `/api/tasks/` as the API path, but later needed to change to `/v1/tasks/` for versioning. This required updating multiple files across the frontend and backend.
-
-**Solution:** 
-- Updated `config/urls.py` to use `v1/` prefix
-- Modified frontend `API_BASE_URL` constant and Vite proxy configuration
-- Updated all API endpoint references and documentation comments
-
-### 4. Material UI Layout Integration
+### 3. Material UI Layout Integration
 
 **Challenge:** Initial layout had overlapping components and inconsistent spacing. Mixing Tailwind CSS classes with Material UI's `sx` prop caused styling conflicts.
 
@@ -255,15 +243,6 @@ During the development of this project, several technical challenges were encoun
 - Removed Tailwind CSS classes from React components
 - Used Material UI's spacing system (`spacing={4}`) for consistent layout
 - Implemented responsive Grid layout for proper component positioning
-
-### 5. API Serializer Field Customization
-
-**Challenge:** Need to display human-readable priority values (e.g., "High" instead of "H") in API responses while maintaining the database efficiency of storing single-character codes.
-
-**Solution:** 
-- Added `priority_display` field to `TaskSerializer` using `source='get_priority_display'`
-- This leverages Django's built-in `get_FOO_display()` method for choice fields
-- Marked it as `read_only` to prevent API input conflicts
 
 ## Future Improvements
 
