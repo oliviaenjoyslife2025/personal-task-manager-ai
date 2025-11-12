@@ -1,6 +1,9 @@
 
 <img width="1316" height="678" alt="image" src="https://github.com/user-attachments/assets/6ae027f3-653a-4874-acfa-2ecb0283572c" />
 
+<img width="1158" height="735" alt="image" src="https://github.com/user-attachments/assets/fd56fdd2-d094-4029-a140-d9c7840b6c1a" />
+
+
 # Personal Task Manager AI
 
 #### A full-stack Task Manager built with Django and React, featuring PostgreSQL data storage, and integrated AI-based analysis to provide user behavioral insights.
